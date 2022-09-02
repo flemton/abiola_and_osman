@@ -153,6 +153,55 @@
       </div>
   </div>
 
+  <!-- cart item section -->
+  <div class="cart-section">
+    <div class="cart-control"></div>
+    <div class="cart-item">
+        <div>
+            <table class="table-cart">
+                <thead>
+                    <tr >
+                        <th>S/N</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody class="table-row">                   
+                </tbody> 
+            </table>
+        </div>
+        <div class="cart-form">
+            <div>
+                <form  action="" id="paymentForm">
+                    <div class="myform" >
+                        <input type="text" id="name" placeholder="Your Fullname: Eg, John Doe" >
+                        <p id="name-error" class="error-message"></p>
+                        <br>
+                        <input type="email" id="email" placeholder="Your E-mail" >
+                        <p id="email-error" class="error-message"></p>
+                        <br>
+                        <input type="phone-number" id="phone-number" placeholder="Your phone number, Eg: 0803 123 4567" >
+                        <p id="phone-number-error" class="error-message"></p>
+                        <br>
+                    </div>
+                    <div class="total-price">
+                        <h3>Total amount to be Paid</h4>
+                        <label for="" style="font-size: 20px;">&#8358
+                            <input type="text" class="total" id="total" value="0" disabled>
+                        </label>
+                        <div>                                       
+                            <button type="reset" id="continue-shopping"><a href="#shop" >Continue Shopping</a></button> 
+                            <button type="submit" id="checkout">Checkout</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     </div>
 
   </div>
