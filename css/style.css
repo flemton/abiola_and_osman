@@ -23,7 +23,7 @@ a:visited {
 /* Intro section */
 #intro {
     display: block;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     margin: 0;
     background-color: #ffe9d6;
@@ -128,6 +128,7 @@ li {
     width: 90%; 
     height: auto;
 }
+
 
 .banner-content {
     font-size: 70px;
@@ -312,4 +313,258 @@ opacity:0.5;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
+}
+
+.table-cart, .summary-cart {
+    counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
+  
+
+.table-cart td:first-child:before, .summary-cart td:first-child:before {
+    counter-increment: serial-number;  /* Increment the serial number counter */
+    content: counter(serial-number);  /* Display the counter */
+}
+
+.table-cart, .summary-cart {
+    width: 98%; 
+    margin: 0 auto;
+ }
+
+.table-cart th, .summary-cart th .table-cart td, .summary-cart td {
+    border-collapse: collapse;
+    padding: 12px 0;
+ }
+
+.table-cart td:last-child{
+    text-align: center;
+ }
+
+
+th {
+    text-align: left;
+  }
+
+
+#quantity {
+    border: none;  
+    width: 25px; 
+    height: 25px; 
+    border-radius: 3px;
+    background-color:#ff9a3d;
+}
+
+
+.number {
+border: none; 
+width: 25px; 
+height: 18px;
+text-align: center;
+font-size: 15px; 
+background-color: #fff;
+color:black;
+
+}
+
+
+.error-message {
+margin: 0px; 
+text-align: center; 
+font-size: 13px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+ /* .remove-from-cart {
+     visibility: hidden;
+ } */
+
+.cart-form {
+    display: block;
+    margin-top: 50px; 
+}
+
+
+.myform {
+    width: 80%; 
+    margin: 0 auto
+}
+
+.myform>input {
+    width: 100%; 
+    height: 30px; 
+    background-color:#ffcd9e;
+
+}
+  
+.total-price {
+    text-align: center;
+}
+
+.total-price>h3 {
+    text-transform: capitalize;
+}
+
+.total-price > div {
+    margin: 5px; 
+    text-align: right;
+}
+
+.total-price button{
+    width: 30%; 
+    height: 45px; 
+    border: none;
+    border-radius: 5px;  
+    background-color: #ffcd9e;
+}
+
+.total {
+    border: none; 
+    margin-left: 0px; 
+    font-size: 20px; 
+    color: black;  
+    width: 110px
+}
+
+/* Order Summary Section */
+
+.order-summary {
+    display: none;
+  }
+
+.summary-list {
+    margin: 15px
+}
+
+.summary-list em {
+    color: #ff9a3d
+}
+
+.summary-list div {
+    text-align: center;
+    margin: 40px 0
+}
+
+.summary-list .exit-btn {
+    text-align: right;
+}
+
+
+.summary-cart th {
+    text-align: center;
+}
+
+.order-table-wrapper {
+    margin: 0 auto
+}
+
+.exit-btn > button {
+    width: 150px; 
+    height: 35px; 
+    border: none;
+    border-radius: 5px;  
+    background-color: #ffcd9e;
+    color: black;
+}
+
+#shop-now {
+    text-align: center; 
+    text-transform: uppercase; 
+    color: white; 
+    font-weight: 100;
+}
+
+.summary-list img {
+    height: 150px;
+}
+
+.order-quantity {
+    border: none; 
+    width:100px;
+    text-align: center; 
+    font-size: 16px; 
+    color: black; 
+}
+  
+
+.open {
+    display: block;
+    background-color: chartreuse;
+}
+
+  
+.open-summary{
+    display: block;
+}
+
+
+
+/* .summary {
+    display: block;
+} */
+
+
+/* The footer section */
+
+.footer {
+    margin-bottom: 0px;
+    margin: 30px 0 0;
+    background-color: #000;
+}
+
+.footer>div {
+    margin: 0 5%;
+    display: flex;
+    line-height: 20px;
+}
+
+.footer p{
+    color: #fff;
+    font-size: small;
+}
+
+.footer-img {
+    width: 50%;
+    margin: auto 0;
+}
+
+.footer-img > img {
+    width: 100px;
+    
+}
+
+
+/* media query for responsiveness */
+
+@media screen and (max-width: 920px) {
+
+    .banner-content {
+        font-size: 50px;
+    }
+    
+}
+
+    
+
+
+@media screen and (max-width: 760px) {
+    .banner-content {
+        font-size: 35px;
+    }
+
+
+    #intro {
+        height: 70vh;
+    }
+
+    .navbar-nav a {
+        font-size: 11px;
+    }
+
+
 }
